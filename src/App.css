@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 80px;
+}
+
+.App-header {
+  background-color: #4b7f3b;
+  height: 150px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.tableContainer, .tabs-container, .mainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+.tableCell {
+  padding: 10px 20px 10px 20px;
+}
+
+td.tableCell {
+  border: 1px solid;
+}
+
+.legend-content {
+  display: inline-block;
+  padding-top: 45px;
+}
+
+.legend-content h5 {
+  font-weight: bold;
+  font-size: 1em;
+  margin: 12px 0px 12px 0px;
+}
+
+img.legend-content {
+  position: absolute;
+  margin-top: -50px;
+  margin-left: -70px;
+}
+
+.table-type-tab {
+  padding: 10px 20px 10px 20px;
+  width: 33.33%;
+  border: 1px solid;
+}
+
+.guideTableContainer {
+  width: 80%;
+}
+
+.guideTable {
+  width: 100%;
+}
+
+.left-header, .right-header {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+h1.right-header {
+  font-size: 4em;
+  color: #D2E7C1;
+}
+
+h3.left-header {
+  font-size: 1.5em;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  text-align: left;
+}
+
+.two-columns {
+  margin: 30px 0px 30px 0px
+}
+
+.left-column {
+  margin-right: 40px;
+}
