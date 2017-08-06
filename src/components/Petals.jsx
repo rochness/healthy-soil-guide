@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class Petals extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   renderPetal1(){
     const yes = (
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -31,7 +35,7 @@ class Petals extends Component {
       </svg>
     );
 
-    return yes;
+    return this.props.bestPracticesData.noTill ? yes : no;
   }
 
   renderPetal2() {
@@ -63,7 +67,7 @@ class Petals extends Component {
         </g>
       </svg>
     );
-    return yes;
+    return (this.props.bestPracticesData.coverCrop || this.props.bestPracticesData.adaptiveGrazing) ? yes : no;
   }
 
   renderPetal3() {
@@ -96,7 +100,7 @@ class Petals extends Component {
       </svg>
     );
 
-    return yes;
+    return (this.props.bestPracticesData.cropRotation || this.props.bestPracticesData.compostAppication) ? yes : no;
   }
 
   renderPetal4() {
@@ -128,7 +132,7 @@ class Petals extends Component {
         </g>
       </svg>
     )
-    return yes;
+    return (this.props.bestPracticesData.composting || this.props.bestPracticesData.perennialForage) ? yes : no;
   }
 
   renderPetal5() {
@@ -163,7 +167,7 @@ class Petals extends Component {
       </svg>
     )
 
-    return no;
+    return (this.props.bestPracticesData.hedgerows) ? yes : no;
   }
 
   render() {

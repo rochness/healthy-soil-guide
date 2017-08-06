@@ -65,7 +65,7 @@ export const farmData = [
       noTill: true,
       coverCrop: true,
       cropRotation: true,
-      hedgrows: true,
+      hedgerows: true,
     },
   },
-]
+];

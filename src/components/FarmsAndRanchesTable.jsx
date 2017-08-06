@@ -1,25 +1,11 @@
 import React, { Component } from 'react';
 import Reactable from "reactable";
+import Petals from "./Petals";
+import { farmData } from "../data/data.js";
 
-class RanchesTable extends Component {
+class FarmsAndRanchesTable extends Component {
   constructor(props) {
     super(props);
-    const name = "Ranch";
-    const zipCode = 90000;
-    const comparedToRegion = 5.5;
-    const improvement = 2.2;
-    const bestPractice = "blah";
-    this.state = {
-      data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => {
-      return {
-        name: name.concat(num),
-        zipCode: zipCode + num,
-        comparedToRegion: (comparedToRegion + num),
-        improvement: (improvement - num),
-        bestPractice: bestPractice.concat(num),
-        };
-      }),
-    };
   }
 
   buildTableHeader() {
@@ -36,7 +22,7 @@ class RanchesTable extends Component {
 
     const headers = Object.keys(fieldToHeader).map((field) => {
       return (
-        <Th className="tableCell" column={ field }>
+        <Th className="tableHeader tableCell" column={ field }>
           <strong className="table-header">
             { fieldToHeader[field] }
           </strong>
@@ -54,7 +40,7 @@ class RanchesTable extends Component {
   buildDataRows() {
     const Tr = Reactable.Tr;
     const Td = Reactable.Td;
-    const rows = this.state.data.map((dataEntry) => {
+    const rows = this.props.rowData.map((dataEntry) => {
       return (
         <Tr>
           <Td className="tableCell" column="name" value={ dataEntry.name }>
@@ -70,7 +56,9 @@ class RanchesTable extends Component {
             <p> { dataEntry.improvement.toFixed(1) + "%" } </p>
           </Td>
           <Td className="tableCell" column="bestPractice" value={dataEntry.bestPractice}>
-            <p> { dataEntry.bestPractice } </p>
+            <div>
+            <Petals bestPracticesData={ dataEntry.bestPractice }/>
+            </div>
           </Td>
         </Tr>
       );
@@ -92,4 +80,4 @@ class RanchesTable extends Component {
   }
 }
 
-export default RanchesTable;
+export default FarmsAndRanchesTable;

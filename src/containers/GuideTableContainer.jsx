@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import Reactable from "reactable";
-import FarmsTable from "../components/FarmsTable";
-import RanchesTable from "../components/RanchesTable";
+import FarmsTableContainer from "../components/FarmsTableContainer";
+import RanchesTableContainer from "../components/RanchesTableContainer";
 import RestaurantsTable from "../components/RestaurantsTable";
 
 class GuideTableContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: <FarmsTable/>,
+      selectedTab: <FarmsTableContainer/>,
     };
   }
 
   onTabClick(tabName) {
     const tabsToComponents = {
-      farms: <FarmsTable/>,
-      ranches: <RanchesTable/>,
+      farms: <FarmsTableContainer/>,
+      ranches: <RanchesTableContainer/>,
       restaurants: <RestaurantsTable/>,
     }
     this.setState({selectedTab: tabsToComponents[tabName]});
