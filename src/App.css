@@ -16,7 +16,7 @@
   font-size: large;
 }
 
-.tableContainer, .tabs-container, .mainContent {
+.tableContainer, .tabs-container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -39,28 +39,42 @@ td.tableCell {
 .legend-content {
   display: inline-block;
   padding-top: 45px;
+  text-align: left;
+  float: left;
 }
 
 .legend-content h5 {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1em;
   margin: 12px 0px 12px 0px;
 }
 
 img.legend-content {
-  position: absolute;
-  margin-top: -50px;
-  margin-left: -70px;
+  z-index: -1;
+}
+
+.tableContainer {
+  border-top: 2px solid black;
+  padding-top: 20px;
 }
 
 .table-type-tab {
-  padding: 10px 20px 10px 20px;
   width: 33.33%;
-  border: 1px solid;
+  border-color: #CACACA;
+  border: solid;
+  border-width: 2px 2px 0 2px;
+  color: #CACACA;
+  margin: 0px 5px;
+  cursor: pointer;
 }
 
-.guideTableContainer {
-  width: 80%;
+.table-type-tab > p {
+  font-size: 1.2em;
+}
+
+.selected {
+  color: black;
+  border-color: black;
 }
 
 .guideTable {
@@ -81,6 +95,15 @@ h3.left-header {
   font-size: 1.5em;
 }
 
+.guide-description h3 {
+  padding-top: 20px;
+  font-size: 1.5em;
+}
+
+.guide-description {
+  text-align: left;
+}
+
 .left-column, .right-column {
   flex: 1;
   text-align: left;
@@ -92,4 +115,24 @@ h3.left-header {
 
 .left-column {
   margin-right: 40px;
+}
+
+.legend-color-1 {
+  color: #D6E5A0;
+}
+
+.legend-color-2 {
+  color: #A6D59B;
+}
+
+.legend-color-3 {
+  color: #54AC47;
+}
+
+.legend-color-4 {
+  color: #25A083;
+}
+
+.legend-color-5 {
+  color: #4B7F3B;
 }

@@ -18,11 +18,11 @@ class TwoColumnInfoSection extends Component {
     };
 
     return (
-      <div className="two-columns" style={ parent }>
-        <div className="left-column">
+      <div className="row">
+        <div className="six columns">
           { this.props.section1 }
         </div>
-        <div className="right-column">
+        <div className="six columns">
           { this.props.section2 }
         </div>
       </div>
