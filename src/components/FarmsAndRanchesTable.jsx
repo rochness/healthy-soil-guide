@@ -69,7 +69,7 @@ class FarmsAndRanchesTable extends Component {
     const Table = Reactable.Table;
 
     return (
-      <div className="tableContainer">
+      <div className="tableContainer twelve columns">
         <Table className="guideTable u-full-width"
           sortable= { ["name", "comparedToRegion", "improvement"] } >
           { this.buildTableHeader() }

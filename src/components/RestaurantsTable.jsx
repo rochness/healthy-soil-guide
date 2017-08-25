@@ -81,13 +81,15 @@ class RestaurantsTable extends Component {
     const Table = Reactable.Table;
 
     return (
-      <div className="tableContainer">
+      <div className="tableContainer twelve columns">
         { /*<Table className="guideTable"
           sortable= { ["name", "comparedToRegion", "improvement"] } >
           { this.buildTableHeader() }
           { this.buildDataRows() }
         </Table> */}
-        <p> Still developing... </p>
+        <div className="restaurant-placeholder">
+          <p> Still developing... </p>
+        </div>
       </div>
     );
   }

@@ -7,8 +7,8 @@
 }
 
 .App-header {
-  background-color: #4b7f3b;
-  height: 150px;
+  padding-top: 1.5em;
+  background-color: #4B7F3B;
   color: white;
 }
 
@@ -28,12 +28,21 @@ table {
   border-spacing: 0px;
 }
 
+th {
+  text-align: center;
+}
+
 .tableCell {
   padding: 10px 20px 10px 20px;
 }
 
-td.tableCell {
-  border: 1px solid;
+td.tableCell, th {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
 }
 
 .legend-content {
@@ -54,27 +63,35 @@ img.legend-content {
 }
 
 .tableContainer {
-  border-top: 2px solid black;
-  padding-top: 20px;
+  margin-top: 40px;
 }
 
 .table-type-tab {
   width: 33.33%;
-  border-color: #CACACA;
-  border: solid;
-  border-width: 2px 2px 0 2px;
+  border-bottom: 2px solid #CACACA;
   color: #CACACA;
-  margin: 0px 5px;
   cursor: pointer;
 }
 
-.table-type-tab > p {
-  font-size: 1.2em;
+.table-type-tab p {
+  font-size: 1.5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.table-type-tab:hover {
+  color: #8E8E8E;
+}
+
+.selected:hover {
+  color: black;
 }
 
 .selected {
   color: black;
-  border-color: black;
+  border: 2px solid #CACACA;
+  border-top: 3px solid #A6D59B;
+  border-bottom: none;
 }
 
 .guideTable {
@@ -88,7 +105,7 @@ img.legend-content {
 
 h1.right-header {
   font-size: 4em;
-  color: #D2E7C1;
+  color: #D1E7C0;
 }
 
 h3.left-header {
@@ -135,4 +152,53 @@ h3.left-header {
 
 .legend-color-5 {
   color: #4B7F3B;
+}
+
+.footer p {
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.action-button {
+  height: 90px;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  width: 80%;
+}
+
+.button-1 {
+  background-color: #4B7F3B;
+}
+
+.button-2 {
+  background-color: #25A083;
+}
+
+.button-3 {
+  background-color: #A6D59B;
+}
+
+.action-buttons-container {
+  margin: 10px 0 20px 0;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+.created-by {
+  text-align: left;
+}
+
+.research-partners p {
+  font-size: .85em;
+}
+
+.research-partners {
+  margin-top: 30px;
+}
+
+.restaurant-placeholder {
+  height: 500px;
 }
