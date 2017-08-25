@@ -167,6 +167,11 @@ h3.left-header {
   width: 80%;
 }
 
+.percentage-data {
+  color: #54AC47;
+  font-weight: 600;
+}
+
 .button-1 {
   background-color: #4B7F3B;
 }

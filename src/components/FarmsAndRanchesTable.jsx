@@ -50,10 +50,10 @@ class FarmsAndRanchesTable extends Component {
             <p> { dataEntry.zipCode } </p>
           </Td>
           <Td className="tableCell" column="comparedToRegion" value={dataEntry.comparedToRegion}>
-            <p> { dataEntry.comparedToRegion.toFixed(1) + "%" } </p>
+            <p className="percentage-data"> { dataEntry.comparedToRegion.toFixed(1) + "%" } </p>
           </Td>
           <Td className="tableCell" column="improvement" value={dataEntry.improvement}>
-            <p> { dataEntry.improvement.toFixed(1) + "%" } </p>
+            <p className="percentage-data"> {dataEntry.improvement > 0 ? "+" : "" }{ dataEntry.improvement.toFixed(1) + "%" } </p>
           </Td>
           <Td className="tableCell" column="bestPractice" value={dataEntry.bestPractice}>
             <div>
