@@ -58,7 +58,7 @@ class FarmsAndRanchesTable extends Component {
     );
 
     const starPlaceholder = (
-      <img className="star"src="" alt="" width="50px" height="52.44px"/>
+      <div className="star"/>
     );
 
     const rows = this.props.rowData.map((dataEntry) => {

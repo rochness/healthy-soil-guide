@@ -72,6 +72,11 @@ th:last-child, td:last-child {
   display: inline-block;
 }
 
+.star {
+  width: 50px;
+  height: 52.44px;
+}
+
 
 .legend-content {
   display: inline-block;
