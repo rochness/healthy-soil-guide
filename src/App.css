@@ -36,6 +36,12 @@ th {
   padding: 10px 20px 10px 20px;
 }
 
+.tableCell p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 td.tableCell, th {
   border-right: 1px solid black;
   border-bottom: 1px solid black;
@@ -44,6 +50,28 @@ td.tableCell, th {
 th:last-child, td:last-child {
   border-right: none;
 }
+
+.reactable-th-comparedtoregion, .reactable-th-improvement {
+  width: 120px;
+}
+
+.percentage-container {
+  position: relative;
+}
+
+.percentage-data {
+  color: #54AC47;
+  font-weight: 600;
+  position: absolute;
+  margin-bottom: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.star, .percentage-data {
+  display: inline-block;
+}
+
 
 .legend-content {
   display: inline-block;
@@ -167,10 +195,6 @@ h3.left-header {
   width: 80%;
 }
 
-.percentage-data {
-  color: #54AC47;
-  font-weight: 600;
-}
 
 .button-1 {
   background-color: #4B7F3B;

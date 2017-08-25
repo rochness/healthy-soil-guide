@@ -37,9 +37,30 @@ class FarmsAndRanchesTable extends Component {
     );
   }
 
+  renderPercentageData(num) {
+    const plusSign = num > 0 ? "+" : "";
+    return plusSign + num.toFixed(1) + "%";
+  }
+
+  hasRegionStar(num) {
+    return num > 3;
+  }
+
+  hasImprovementStar(num) {
+    return num > 1;
+  }
+
   buildDataRows() {
     const Tr = Reactable.Tr;
     const Td = Reactable.Td;
+    const star = (
+      <img className="star"src="/assets/green-star.png" alt="" width="50px"/>
+    );
+
+    const starPlaceholder = (
+      <img className="star"src="" alt="" width="50px" height="52.44px"/>
+    );
+
     const rows = this.props.rowData.map((dataEntry) => {
       return (
         <Tr>
@@ -50,10 +71,18 @@ class FarmsAndRanchesTable extends Component {
             <p> { dataEntry.zipCode } </p>
           </Td>
           <Td className="tableCell" column="comparedToRegion" value={dataEntry.comparedToRegion}>
-            <p className="percentage-data"> { dataEntry.comparedToRegion.toFixed(1) + "%" } </p>
+            <div className="percentage-container">
+              { this.hasRegionStar(dataEntry.comparedToRegion) ? star : starPlaceholder }
+              <p className="percentage-data"> { dataEntry.comparedToRegion.toFixed(1) + "%" } </p>
+            </div>
           </Td>
           <Td className="tableCell" column="improvement" value={dataEntry.improvement}>
-            <p className="percentage-data"> {dataEntry.improvement > 0 ? "+" : "" }{ dataEntry.improvement.toFixed(1) + "%" } </p>
+            <div className="percentage-container">
+              { this.hasImprovementStar(dataEntry.improvement) ? star :starPlaceholder }
+              <p className="percentage-data">
+                { this.renderPercentageData(dataEntry.improvement) }
+              </p>
+            </div>
           </Td>
           <Td className="tableCell" column="bestPractice" value={dataEntry.bestPractice}>
             <div>
