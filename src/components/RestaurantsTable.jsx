@@ -82,13 +82,8 @@ class RestaurantsTable extends Component {
 
     return (
       <div className="tableContainer twelve columns">
-        { /*<Table className="guideTable"
-          sortable= { ["name", "comparedToRegion", "improvement"] } >
-          { this.buildTableHeader() }
-          { this.buildDataRows() }
-        </Table> */}
-        <div className="restaurant-placeholder">
-          <p> Still developing... </p>
+        <div className="placeholder">
+          <p> Coming soon... </p>
         </div>
       </div>
     );

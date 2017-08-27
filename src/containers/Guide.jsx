@@ -63,7 +63,7 @@ class Guide extends Component {
         <div className="legend-content">
           { legendMap[this.state.selectedTabName] }
         </div>
-        <img className="legend-content"src="/assets/artichoke.png" alt="" width="220px"/>
+        <img className="legend-content"src="/assets/artichoke.png" alt=""/>
       </div>
     );
   }

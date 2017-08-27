@@ -403,16 +403,36 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+  img.legend-content {
+    width: 80px;
+  }
+}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (max-width: 550px) {
+  img.legend-content {
+    width: 80px;
+  }
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (max-width: 750px) {
+  img.legend-content {
+    width: 120px;
+  }
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+  img.legend-content {
+    width: 210px;
+  }
+}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  img.legend-content {
+    width: 210px;
+  }
+}

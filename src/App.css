@@ -137,12 +137,7 @@ img.legend-content {
 }
 
 h1.right-header {
-  font-size: 4em;
   color: #D1E7C0;
-}
-
-h3.left-header {
-  font-size: 1.5em;
 }
 
 .guide-description h3 {
@@ -192,6 +187,10 @@ h3.left-header {
   margin-bottom: 0px;
 }
 
+.footer {
+  padding-bottom: 20px;
+}
+
 .action-button {
   height: 90px;
   color: white;
@@ -233,6 +232,83 @@ h5 {
   margin-top: 30px;
 }
 
-.restaurant-placeholder {
+.placeholder {
   height: 500px;
+}
+
+.menu-icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 32px 24px 32px 24px;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: #D1E7C0;
+  margin: 6px 0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  background-color: #D1E7C0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu-open {
+  width: 200px;
+}
+
+.menu-close {
+  width: 0px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 16px;}
+}
+
+.shifted-container {
+  margin-left: 200px;
+  transition: 0.5s;
+}
+
+.not-shifted {
+  transition: 0.5s;
 }
