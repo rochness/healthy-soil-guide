@@ -37,6 +37,7 @@ class Footer extends Component {
         "Land Stewardship Project",
         "Millennium Institute/ Hans Herren",
         "Northern Plains Resource Council",
+        "F.E.E.D Sonoma",
       ].map((partner) => {
         return <p>{ partner }</p>;
       })
