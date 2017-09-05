@@ -136,7 +136,7 @@ img.legend-content {
   margin-right: 40px;
 }
 
-h1.right-header {
+h1.right-header, .light-green {
   color: #D1E7C0;
 }
 
@@ -311,4 +311,8 @@ h5 {
 
 .not-shifted {
   transition: 0.5s;
+}
+
+.mobile-only {
+  display: none;
 }

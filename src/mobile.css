@@ -1,0 +1,99 @@
+@media only screen and (max-width: 600px) {
+  img.legend-content {
+    width: 100px;
+  }
+
+  .bar {
+    width: 20px;
+    height: 2px;
+  }
+
+  .menu-icon-container {
+    padding: 15px 15px 15px 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 60px
+  }
+
+  h5.left-header {
+    font-size: 1em;
+  }
+
+  .left-header {
+    margin-right: 10px;
+    display: none;
+  }
+
+  .right-header {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .guide-description h3, .partners-container h5 {
+    font-size: 1em;
+  }
+
+  .guide-description p {
+    font-size: .5em;
+    margin-bottom: 10px;
+  }
+
+  .six {
+    width: 100%;
+  }
+
+  .legend-content {
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .legend-content h5 {
+    font-size: .5em;
+    margin: 3px 0 3px 0;
+  }
+
+  .table-type-tab p, .table-header, .tableCell p, .partners-container p {
+    font-size: .5em;
+  }
+
+  .partners-container h5 {
+    text-align: left;
+  }
+
+  .star {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sidenav a {
+    font-size: .5em;
+  }
+
+  .sidenav .closebtn {
+    font-size: 1.5em;
+    right: 5px;
+  }
+
+  .menu-open {
+    width: 120px;
+  }
+
+  .shifted-container {
+    margin-left: 120px;
+  }
+
+  .action-button {
+    height: 40px;
+    font-size: .5em;
+  }
+
+  .four {
+    width: 100%;
+  }
+}

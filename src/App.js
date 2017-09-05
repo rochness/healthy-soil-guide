@@ -5,6 +5,7 @@ import {
   Switch
 } from 'react-router-dom';
 import './App.css';
+import './mobile.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Guide from './containers/Guide';
