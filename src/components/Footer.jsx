@@ -4,8 +4,20 @@ class Footer extends Component {
   render() {
     const actionButtons = ["PARTICIPATE", "FEEDBACK", "DONATE"].map((action, i) =>
       {
+        let actionContent;
+        if( action === "DONATE" ) {
+          actionContent = (
+            <a
+              className="donate-link"
+              href="http://perennialfarming.org/donate/"
+              target="_blank">DONATE
+            </a>);
+        } else {
+          actionContent = action;
+        }
+
         return (
-          <button className={ `action-button button-${i+1} four columns` }>{ action } </button>
+          <button className={ `action-button button-${i+1} four columns` }>{ actionContent } </button>
         );
       });
 

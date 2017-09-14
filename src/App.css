@@ -199,6 +199,11 @@ h1.right-header, .light-green {
   width: 80%;
 }
 
+.donate-link {
+  text-decoration: none;
+  color: white;
+}
+
 
 .button-1 {
   background-color: #4B7F3B;
@@ -322,6 +327,6 @@ h5 {
   margin-top: 20px;
 }
 
-.methodologyContainer {
+.methodologyContainer, .approach-content {
   text-align: left;
 }

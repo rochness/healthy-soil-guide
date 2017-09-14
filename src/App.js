@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import Guide from './containers/Guide';
 import Content from './containers/Content';
 import MethodologyContent from "./components/MethodologyContent";
+import ApproachContent from "./components/ApproachContent";
+
 
 class App extends Component {
   constructor() {
@@ -41,7 +43,8 @@ class App extends Component {
         <Link to="/approach">Approach</Link>
         <Link to="/methodology">Methodology</Link>
         <Link to="/participate">Participate</Link>
-        <Link to="/donate">Donate</Link>
+        <a href="http://perennialfarming.org/donate/" target="_blank">Donate</a>
+        {/*<Link to="/donate">Donate</Link>*/}
         <Link to="/faq">FAQ</Link>
       </div>
     );
@@ -88,7 +91,7 @@ const Main = () => (
 )
 
 const About = () => ( <Content title="About"/> )
-const Approach = () => ( <Content title="Approach"/> )
+const Approach = () => ( <Content title="Approach" content={ ApproachContent }/> )
 const Methodology = () => ( <Content title="Methodology" content={ MethodologyContent }/> )
 const Participate = () => ( <Content title="Participate"/> )
 const Donate = () => ( <Content title="Donate"/> )
