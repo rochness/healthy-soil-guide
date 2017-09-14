@@ -10,6 +10,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Guide from './containers/Guide';
 import Content from './containers/Content';
+import MethodologyContent from "./components/MethodologyContent";
 
 class App extends Component {
   constructor() {
@@ -88,7 +89,7 @@ const Main = () => (
 
 const About = () => ( <Content title="About"/> )
 const Approach = () => ( <Content title="Approach"/> )
-const Methodology = () => ( <Content title="Methodology"/> )
+const Methodology = () => ( <Content title="Methodology" content={ MethodologyContent }/> )
 const Participate = () => ( <Content title="Participate"/> )
 const Donate = () => ( <Content title="Donate"/> )
 const Faq = () => ( <Content title="FAQ"/> )

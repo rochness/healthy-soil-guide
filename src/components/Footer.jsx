@@ -18,6 +18,7 @@ class Footer extends Component {
         "The Sustainable Food Lab",
         "Eat REAL",
         "The Regenerative Agriculture Foundation",
+        "F.E.E.D Sonoma",
       ].map((org) => {
         return <p>{ org }</p>;
       });
@@ -37,7 +38,6 @@ class Footer extends Component {
         "Land Stewardship Project",
         "Millennium Institute/ Hans Herren",
         "Northern Plains Resource Council",
-        "F.E.E.D Sonoma",
       ].map((partner) => {
         return <p>{ partner }</p>;
       })

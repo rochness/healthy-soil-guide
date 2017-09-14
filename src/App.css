@@ -316,3 +316,12 @@ h5 {
 .mobile-only {
   display: none;
 }
+
+.contentPageTitle {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.methodologyContainer {
+  text-align: left;
+}
