@@ -3,6 +3,8 @@ import React from 'react';
 const MethodologyContent = () => {
   return (
     <div className="methodologyContainer">
+      <p className="methodology-intro"> The Methodology was created by the <a href="https://snappartnership.net/groups/managing-soil-carbon/" target="_blank">SNAPP: Managing Soil Carbon Working Group</a>. Here's their overview:
+      </p>
       <h5>What is soil health and why focus on organic matter? </h5>
       <p>Soil health is a concept that has emerged out of decades of work covering other related concepts, including soil fertility, soil quality, and soil health. All of these conceptualizations of what makes a “good” soil have struggled with how to reduce soils to measurable indicators. All approaches have come up with lists and most of those lists overlap in certain indicators. In the current approaches to soil health—as with the earliest work in soil science—there is broad acknowledgement of the physical, chemical, and biological aspects of soil as essential to a healthy soil.
       </p>
