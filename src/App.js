@@ -12,6 +12,8 @@ import Guide from './containers/Guide';
 import Content from './containers/Content';
 import MethodologyContent from "./components/MethodologyContent";
 import ApproachContent from "./components/ApproachContent";
+import ParticipateContent from "./components/ParticipateContent";
+
 
 
 class App extends Component {
@@ -84,7 +86,7 @@ const Main = () => (
     <Route path='/about' component={ About } />
     <Route path='/approach' component={ Approach } />
     <Route path='/methodology' component={ Methodology } />
-    <Route path='/participate' component={ Participate } />
+    <Route path='/participate' component={ ParticipateContent } />
     <Route path='/donate' component={ Donate } />
     <Route path='/faq' component={ Faq } />
   </Switch>
@@ -93,7 +95,7 @@ const Main = () => (
 const About = () => ( <Content title="About"/> )
 const Approach = () => ( <Content title="Approach" content={ ApproachContent }/> )
 const Methodology = () => ( <Content title="Methodology" content={ MethodologyContent }/> )
-const Participate = () => ( <Content title="Participate"/> )
+const Participate = () => ( <Content title="Participate" content={ ParticipateContent }/> )
 const Donate = () => ( <Content title="Donate"/> )
 const Faq = () => ( <Content title="FAQ"/> )
 

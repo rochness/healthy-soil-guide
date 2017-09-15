@@ -16,6 +16,10 @@
   font-size: large;
 }
 
+.header-title-container {
+  cursor: pointer;
+}
+
 .tableContainer, .tabs-container {
   width: 100%;
   display: flex;
@@ -199,11 +203,14 @@ h1.right-header, .light-green {
   width: 80%;
 }
 
-.donate-link {
+.action-button > a {
   text-decoration: none;
   color: white;
 }
 
+.action-button > a:hover {
+  color: #333;
+}
 
 .button-1 {
   background-color: #4B7F3B;
@@ -327,6 +334,14 @@ h5 {
   margin-top: 20px;
 }
 
-.methodologyContainer, .approach-content {
+.methodologyContainer, .approach-content, .participate-container {
   text-align: left;
+}
+
+label > input {
+  margin-left: 10px;
+}
+
+textarea {
+  width: 70%;
 }

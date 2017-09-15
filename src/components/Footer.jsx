@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
+import { browserHistory, Link } from 'react-router-dom';
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleParticipateClick = () => {
+    browserHistory.push('/participate');
+  }
+
   render() {
+    console.log("browserHistory: ")
     const actionButtons = ["PARTICIPATE", "FEEDBACK", "DONATE"].map((action, i) =>
       {
         let actionContent;
@@ -12,12 +22,16 @@ class Footer extends Component {
               href="http://perennialfarming.org/donate/"
               target="_blank">DONATE
             </a>);
+        } else if( action === "PARTICIPATE") {
+          actionContent = (<Link to="/participate">{ action }</Link>);
         } else {
           actionContent = action;
         }
 
         return (
-          <button className={ `action-button button-${i+1} four columns` }>{ actionContent } </button>
+          <button className={ `action-button button-${i+1} four columns` }>
+            { actionContent }
+          </button>
         );
       });
 

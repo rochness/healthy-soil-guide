@@ -11,7 +11,6 @@ class RanchesTableContainer extends Component {
     };
   }
 
-
   render() {
     return <FarmsAndRanchesTable rowData= { this.state.data }/>;
   }
