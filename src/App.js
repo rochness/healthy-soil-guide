@@ -41,7 +41,7 @@ class App extends Component {
             &times;
         </a>
         <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        {/*<Link to="/about">About</Link>*/}
         <Link to="/approach">Approach</Link>
         <Link to="/methodology">Methodology</Link>
         <Link to="/participate">Participate</Link>
