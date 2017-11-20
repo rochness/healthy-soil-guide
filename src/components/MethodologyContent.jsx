@@ -3,6 +3,9 @@ import React from 'react';
 const MethodologyContent = () => {
   return (
     <div className="methodologyContainer">
+      <div className="example-text-container">
+        NOTE: this is a draft methodology
+      </div>
       <p className="methodology-intro"> The Methodology was created by the <a href="https://snappartnership.net/groups/managing-soil-carbon/" target="_blank">SNAPP: Managing Soil Carbon Working Group</a>. Here's their overview:
       </p>
       <h5>What is soil health and why focus on organic matter? </h5>

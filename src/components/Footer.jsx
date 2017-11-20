@@ -45,6 +45,7 @@ class Footer extends Component {
         "Eat REAL",
         "The Regenerative Agriculture Foundation",
         "F.E.E.D Sonoma",
+        "The American Farmland Trust",
       ].map((org) => {
         return <p>{ org }</p>;
       });

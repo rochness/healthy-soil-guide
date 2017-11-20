@@ -155,11 +155,11 @@ class Guide extends Component {
         <div className="tabs-container twelve columns">
           { this.tableTabs() }
         </div>
-        <div className="example-text-container twelve columns">
-          { this.state.selectedTabName === "restaurants" ? null :
-            <span> EXAMPLE DATA (we are still in the process of compiling data) </span>
-          }
-        </div>
+        { this.state.selectedTabName === "restaurants" ? null :
+          <div className="example-text-container twelve columns">
+            EXAMPLE DATA (we are still in the process of compiling data)
+          </div>
+        }
         { this.state.selectedTable }
       </div>
     );

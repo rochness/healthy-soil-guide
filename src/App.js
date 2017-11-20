@@ -8,6 +8,7 @@ import './App.css';
 import './mobile.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Home from './components/Home';
 import Guide from './containers/Guide';
 import Content from './containers/Content';
 import MethodologyContent from "./components/MethodologyContent";
@@ -40,14 +41,14 @@ class App extends Component {
           onClick={ this.handleCloseNavClick.bind(this) }>
             &times;
         </a>
-        <Link to="/">Home</Link>
-        <Link to="/guide">Soil Guide</Link>
-        <Link to="/approach">Approach</Link>
-        <Link to="/methodology">Methodology</Link>
-        <Link to="/participate">Participate</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/">Home</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">Soil Guide</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/approach">Approach</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/methodology">Methodology</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/participate">Participate</Link>
         <a href="http://perennialfarming.org/donate/" target="_blank">Donate</a>
         {/*<Link to="/donate">Donate</Link>*/}
-        <Link to="/faq">FAQ</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/faq">FAQ</Link>
       </div>
     );
     return sideNav;
@@ -82,7 +83,7 @@ class App extends Component {
 
 const Main = () => (
   <Switch>
-    <Route exact path='/' component={ Guide } />
+    <Route exact path='/' component={ Home } />
     <Route path='/guide' component={ Guide } />
     <Route path='/about' component={ About } />
     <Route path='/approach' component={ Approach } />

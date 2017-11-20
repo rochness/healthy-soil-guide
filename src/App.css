@@ -188,7 +188,7 @@ h1.right-header, .light-green {
 }
 
 .footer {
-  padding-bottom: 20px;
+  padding: 30px 0 30px 0;
 }
 
 .action-button {
@@ -349,4 +349,30 @@ textarea {
   padding-left: 20px;
   color: #eaa43a;
   font-weight: bold;
+}
+
+.video-container {
+  position: relative;
+  z-index: 0;
+}
+
+.video-buttons {
+  position: absolute;
+  z-index: 3;
+  top: 80%;
+  left: 0;
+  width: 100%;
+}
+
+.video-buttons button {
+  background: rgba(0,0,0,0.44);
+  height: 50px;
+  margin-left: 4%;
+  line-height: inherit;
+}
+
+.video-buttons a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
