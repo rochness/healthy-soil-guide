@@ -3,6 +3,9 @@
     width: 100px;
   }
 
+  .example-text-container {
+    font-size: .75em;
+  }
   .bar {
     width: 20px;
     height: 2px;

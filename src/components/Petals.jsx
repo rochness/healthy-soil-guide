@@ -35,7 +35,7 @@ class Petals extends Component {
       </svg>
     );
 
-    return this.props.bestPracticesData.noTill ? yes : no;
+    return this.props.bestPracticesData.bestPractice1 ? yes : no;
   }
 
   renderPetal2() {
@@ -67,7 +67,7 @@ class Petals extends Component {
         </g>
       </svg>
     );
-    return (this.props.bestPracticesData.coverCrop || this.props.bestPracticesData.adaptiveGrazing) ? yes : no;
+    return this.props.bestPracticesData.bestPractice2 ? yes : no;
   }
 
   renderPetal3() {
@@ -100,7 +100,7 @@ class Petals extends Component {
       </svg>
     );
 
-    return (this.props.bestPracticesData.cropRotation || this.props.bestPracticesData.compostAppication) ? yes : no;
+    return this.props.bestPracticesData.bestPractice3 ? yes : no;
   }
 
   renderPetal4() {
@@ -132,7 +132,7 @@ class Petals extends Component {
         </g>
       </svg>
     )
-    return (this.props.bestPracticesData.composting || this.props.bestPracticesData.perennialForage) ? yes : no;
+    return this.props.bestPracticesData.bestPractice4 ? yes : no;
   }
 
   renderPetal5() {
@@ -167,7 +167,7 @@ class Petals extends Component {
       </svg>
     )
 
-    return (this.props.bestPracticesData.hedgerows) ? yes : no;
+    return this.props.bestPracticesData.bestPractice5 ? yes : no;
   }
 
   render() {

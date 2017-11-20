@@ -41,7 +41,7 @@ class App extends Component {
             &times;
         </a>
         <Link to="/">Home</Link>
-        {/*<Link to="/about">About</Link>*/}
+        <Link to="/guide">Soil Guide</Link>
         <Link to="/approach">Approach</Link>
         <Link to="/methodology">Methodology</Link>
         <Link to="/participate">Participate</Link>
@@ -83,6 +83,7 @@ class App extends Component {
 const Main = () => (
   <Switch>
     <Route exact path='/' component={ Guide } />
+    <Route path='/guide' component={ Guide } />
     <Route path='/about' component={ About } />
     <Route path='/approach' component={ Approach } />
     <Route path='/methodology' component={ Methodology } />

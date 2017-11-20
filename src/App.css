@@ -92,15 +92,11 @@ th:last-child, td:last-child {
 .legend-content h5 {
   font-weight: 600;
   font-size: 1em;
-  margin: 12px 0px 12px 0px;
+  margin: 0px 0px 12px 0px;
 }
 
 img.legend-content {
   z-index: -1;
-}
-
-.tableContainer {
-  margin-top: 40px;
 }
 
 .table-type-tab {
@@ -344,4 +340,13 @@ label > input {
 
 textarea {
   width: 70%;
+}
+
+.example-text-container {
+  font-size: 1.5em;
+  text-align: left;
+  margin: 20px;
+  padding-left: 20px;
+  color: #eaa43a;
+  font-weight: bold;
 }

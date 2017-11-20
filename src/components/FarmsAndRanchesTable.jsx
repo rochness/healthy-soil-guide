@@ -9,22 +9,22 @@ class FarmsAndRanchesTable extends Component {
   }
 
   buildTableHeader() {
-    const fieldToHeader = {
-      name: "Name",
-      zipCode: "Zip Code",
-      comparedToRegion: "Organic Matter Compared to Region",
-      improvement: "Organic Matter Improvement",
-      bestPractice: "Best Practices"
-    };
+    // const fieldToHeader = {
+    //   name: "Name",
+    //   zipCode: "Zip Code",
+    //   comparedToRegion: "Organic Matter Compared to Region",
+    //   improvement: "Organic Matter Improvement",
+    //   bestPractice: "Best Practices"
+    // };
 
     const Thead = Reactable.Thead;
     const Th = Reactable.Th;
 
-    const headers = Object.keys(fieldToHeader).map((field) => {
+    const headers = this.props.headers.concat("Best Practices").map((field) => {
       return (
         <Th className="tableHeader tableCell" column={ field }>
           <strong className="table-header">
-            { fieldToHeader[field] }
+            { field }
           </strong>
         </Th>
       );
@@ -61,32 +61,42 @@ class FarmsAndRanchesTable extends Component {
       <div className="star"/>
     );
 
+    const headers = this.props.headers.concat("Best Practices");
+
     const rows = this.props.rowData.map((dataEntry) => {
+      const bestPractice = {
+        bestPractice1: dataEntry.bestPractice1,
+        bestPractice2: dataEntry.bestPractice2,
+        bestPractice3: dataEntry.bestPractice3,
+        bestPractice4: dataEntry.bestPractice4,
+        bestPractice5: dataEntry.bestPractice5,
+      };
+
       return (
         <Tr>
-          <Td className="tableCell" column="name" value={ dataEntry.name }>
-            <p> { dataEntry.name.toUpperCase() } </p>
+          <Td className="tableCell" column={headers[0]} value={ dataEntry[headers[0]] }>
+            <p> { dataEntry[headers[0]].toUpperCase() } </p>
           </Td>
-          <Td className="tableCell" column="zipCode" value={dataEntry.zipCode}>
-            <p> { dataEntry.zipCode } </p>
+          <Td className="tableCell" column={headers[1]} value={dataEntry[headers[1]]}>
+            <p> { dataEntry[headers[1]] } </p>
           </Td>
-          <Td className="tableCell" column="comparedToRegion" value={dataEntry.comparedToRegion}>
+          <Td className="tableCell" column={headers[2]} value={dataEntry[headers[2]]}>
             <div className="percentage-container">
-              { this.hasRegionStar(dataEntry.comparedToRegion) ? star : starPlaceholder }
-              <p className="percentage-data"> { dataEntry.comparedToRegion.toFixed(1) + "%" } </p>
+              { this.hasRegionStar(dataEntry[headers[2]]) ? star : starPlaceholder }
+              <p className="percentage-data"> { dataEntry[headers[2]].toFixed(1) + "%" } </p>
             </div>
           </Td>
-          <Td className="tableCell" column="improvement" value={dataEntry.improvement}>
+          <Td className="tableCell" column={headers[3]} value={dataEntry[headers[4]]}>
             <div className="percentage-container">
-              { this.hasImprovementStar(dataEntry.improvement) ? star :starPlaceholder }
+              { this.hasImprovementStar(dataEntry[headers[3]]) ? star :starPlaceholder }
               <p className="percentage-data">
-                { this.renderPercentageData(dataEntry.improvement) }
+                { this.renderPercentageData(dataEntry[headers[3]]) }
               </p>
             </div>
           </Td>
-          <Td className="tableCell" column="bestPractice" value={dataEntry.bestPractice}>
+          <Td className="tableCell" column={headers[4]} value={dataEntry[headers[4]]}>
             <div>
-            <Petals bestPracticesData={ dataEntry.bestPractice }/>
+              <Petals bestPracticesData={ bestPractice }/>
             </div>
           </Td>
         </Tr>
@@ -100,7 +110,8 @@ class FarmsAndRanchesTable extends Component {
     return (
       <div className="tableContainer twelve columns">
         <Table className="guideTable u-full-width"
-          sortable= { ["name", "comparedToRegion", "improvement"] } >
+          sortable>
+         {/*sortable={ ["name", "comparedToRegion", "improvement"] */}
           { this.buildTableHeader() }
           { this.buildDataRows() }
         </Table>

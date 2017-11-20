@@ -10,32 +10,78 @@ class Guide extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTable: <FarmsTableContainer/>,
-      selectedTabName: "farms",
+      selectedTable: <RestaurantsTable/>,
+      selectedTabName: "restaurants",
     };
   }
 
   guideInfoDescription() {
+    const ranchDescription = (
+      <p>This Healthy Soil Guide aims to encourage chefs and
+      consumers to buy from ranchers using sustainable practices.
+      Healthy soil enhances flavor, nutrition, soil’s water-holding
+      capacity, and—critically—a ranch’s ability to draw down
+      carbon dioxide and mitigate global warming. For the sake
+      of simplicity, we have foregrounded a single metric: Soil
+      Organic Matter. This highlights the work of ranches that are
+      doing the hard work of regenerative agriculture: small
+      organic ranchers as well as larger operations that work
+      to maximize soil health even if they use some chemical
+      fertilizer. Click on each ranch's entry for more information.
+      </p>
+    );
+
+    const farmDescription = (
+      <p>This Healthy Soil Guide aims to encourage chefs and
+      consumers to buy from farmers using sustainable practices.
+      Healthy soil enhances flavor, nutrition, soil’s water-holding
+      capacity, and—critically—a farm’s ability to draw down
+      carbon dioxide and mitigate global warming. For the sake
+      of simplicity, we have foregrounded a single metric: Soil
+      Organic Matter. This highlights the work of farms that are
+      doing the hard work of regenerative agriculture: small
+      organic farmers as well as larger operations that work
+      to maximize soil health even if they use some chemical
+      fertilizer. Click on each farm’s entry for more information.
+      </p>
+    );
+
+    const restaurantDescription = (
+      <p>This Healthy Soil Guide is a concerted effort by
+      chefs to improve the food system by supporting
+      healthy soil. Organic Matter in soil Healthy soil
+      enhances flavor, nutrition, water-holding capacity,
+      and—critically—a soil’s ability to draw down
+      carbon dioxide and reverse global warming.
+      Increasing global soil organic matter by 2% would
+      bring greenhouse gases below 350 ppm and the
+      participating restaurants want to help spread thiis
+      message through delicious food.
+      </p>
+    );
+
+    const descriptionMap = {
+      farms: farmDescription,
+      ranches: ranchDescription,
+      restaurants: restaurantDescription,
+    };
     return (
       <div className="guide-description">
         <h3> Healthy Soil Means Better Food </h3>
-        <p>This Healthy Soil Guide aims to encourage chefs and
-        consumers to buy from farmers using sustainable practices.
-        Healthy soil enhances flavor, nutrition, soil’s water-holding
-        capacity, and—critically—a farm’s ability to draw down
-        carbon dioxide and mitigate global warming. For the sake
-        of simplicity, we have foregrounded a single metric: Soil
-        Organic Matter. This highlights the work of farms that are
-        doing the hard work of regenerative agriculture: small
-        organic farmers as well as larger operations that work
-        to maximize soil health even if they use some chemical
-        fertilizer. Click on each farm’s entry for more information.
-        </p>
+        { descriptionMap[this.state.selectedTabName] }
       </div>
     );
   }
 
   guideInfoLegend () {
+    const restaurantLegend = [
+      (<h5 key={1} className="legend-color-1"> SOURCES PRIMARILY<br/>THROUGH FARMS<br/>WITH HEALTHY SOIL</h5>),
+      (<h5 key={2} className="legend-color-2">SOURCES PRIMARILY<br/>PASTURE RAISED OR<br/>100% GRASS FED MEAT</h5>),
+      (<h5 key={3} className="legend-color-3">COMPOSTS</h5>),
+      //(<h5 key={4} className="legend-color-4">COMPOSTS (YES IT'S<br/>THAT IMPORTANT</h5>),
+      (<h5 key={5} className="legend-color-5">GROWS FOOD OR<br/>WORKS DIRECTLY<br/>WITH A PRODUCER</h5>),
+    ];
+
     const farmLegend = [
       (<h5 key={1} className="legend-color-1"> NO-TILL </h5>),
       (<h5 key={2} className="legend-color-2">COVER CROPPING</h5>),
@@ -55,7 +101,7 @@ class Guide extends Component {
     const legendMap = {
       farms: farmLegend,
       ranches: ranchLegend,
-      restaurants: farmLegend,
+      restaurants: restaurantLegend,
     };
 
     return (
@@ -79,8 +125,8 @@ class Guide extends Component {
 
   onTabClick(tabName) {
     const tabsToComponents = {
-      farms: <FarmsTableContainer/>,
-      ranches: <RanchesTableContainer/>,
+      farms: <FarmsTableContainer dataType="farms"/>,
+      ranches: <RanchesTableContainer dataType="ranches"/>,
       restaurants: <RestaurantsTable/>,
     }
     this.setState({
@@ -90,7 +136,7 @@ class Guide extends Component {
   }
 
   tableTabs() {
-    const tabNames = ["farms", "ranches", "restaurants"];
+    const tabNames = ["restaurants", "farms", "ranches"];
     return tabNames.map((tabName, index) => {
       return (
         <div key={index}
@@ -104,13 +150,17 @@ class Guide extends Component {
 
   renderGuideTable() {
     const Table = Reactable.Table;
-
     return (
-        <div class="row">
-          <div className="tabs-container twelve columns">
-            { this.tableTabs() }
-          </div>
-          { this.state.selectedTable }
+      <div class="row">
+        <div className="tabs-container twelve columns">
+          { this.tableTabs() }
+        </div>
+        <div className="example-text-container twelve columns">
+          { this.state.selectedTabName === "restaurants" ? null :
+            <span> EXAMPLE DATA (we are still in the process of compiling data) </span>
+          }
+        </div>
+        { this.state.selectedTable }
       </div>
     );
   }
