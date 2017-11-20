@@ -41,12 +41,12 @@ class App extends Component {
           onClick={ this.handleCloseNavClick.bind(this) }>
             &times;
         </a>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/">Home</Link>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">Soil Guide</Link>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/approach">Approach</Link>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/methodology">Methodology</Link>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/participate">Participate</Link>
-        <a href="http://perennialfarming.org/donate/" target="_blank">Donate</a>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/">HOME</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">GUIDE</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/approach">APPROACH</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/methodology">METHODOLOGY</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/participate">PARTICIPATE</Link>
+        <a href="http://perennialfarming.org/donate/" target="_blank">DONATE</a>
         {/*<Link to="/donate">Donate</Link>*/}
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/faq">FAQ</Link>
       </div>

@@ -134,6 +134,8 @@ img.legend-content {
 .left-header, .right-header {
   display: inline-block;
   margin-right: 40px;
+  letter-spacing: .3rem;
+  font-weight: bold;
 }
 
 h1.right-header, .light-green {
@@ -294,13 +296,13 @@ h5 {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 0;
   font-size: 36px;
   margin-left: 50px;
 }
 
 .menu-open {
-  width: 200px;
+  width: 220px;
 }
 
 .menu-close {

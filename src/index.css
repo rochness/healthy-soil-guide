@@ -1,8 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@font-face {
+  font-family: "Futura";
+  src: url(/public/fonts/FuturaStd-Bold.oft) format("opentype");
+}
+
+@font-face {
+  font-family: "Futura-Extra";
+  src: url(/public/fonts/FuturaStd-ExtraBold.oft) format("opentype");
+}
+
+h1 {
+  font-family: "Future-Extra", sans-serif;
+}
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+}
+
+button, a {
+  font-family: "Futura", sans-serif;
+  letter-spacing: .4rem;
 }
