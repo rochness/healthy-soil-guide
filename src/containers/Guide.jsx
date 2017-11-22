@@ -12,7 +12,7 @@ class Guide extends Component {
     this.state = {
       //selectedTable: <RestaurantsTable/>,
       //selectedTabName: "restaurants",
-      selectedTable: <FarmsTableContainer/>,
+      selectedTable: <FarmsTableContainer dataType="farms"/>,
       selectedTabName: "farms",
     };
   }
