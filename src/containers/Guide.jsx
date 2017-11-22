@@ -153,7 +153,7 @@ class Guide extends Component {
   renderGuideTable() {
     const Table = Reactable.Table;
     return (
-      <div class="row">
+      <div className="row">
         <div className="tabs-container twelve columns">
           { this.tableTabs() }
         </div>

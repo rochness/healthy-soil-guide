@@ -11,7 +11,6 @@ class Footer extends Component {
   }
 
   render() {
-    console.log("browserHistory: ")
     const actionButtons = ["PARTICIPATE", "FEEDBACK", "DONATE"].map((action, i) =>
       {
         let actionContent;
