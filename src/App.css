@@ -281,7 +281,7 @@ h5 {
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.2vw;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -302,7 +302,7 @@ h5 {
 }
 
 .menu-open {
-  width: 220px;
+  width: 20%;
 }
 
 .menu-close {
@@ -311,7 +311,7 @@ h5 {
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 16px;}
+  /*.sidenav a {font-size: 16px;}*/
 }
 
 .shifted-container {
