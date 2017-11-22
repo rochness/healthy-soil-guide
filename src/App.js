@@ -41,8 +41,8 @@ class App extends Component {
           onClick={ this.handleCloseNavClick.bind(this) }>
             &times;
         </a>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/">HOME</Link>
-        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">GUIDE</Link>
+        {/*<Link onClick={ this.handleCloseNavClick.bind(this) } to="/">HOME</Link>*/}
+        {/*<Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">GUIDE</Link>*/}
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/approach">APPROACH</Link>
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/methodology">METHODOLOGY</Link>
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/participate">PARTICIPATE</Link>
@@ -83,7 +83,7 @@ class App extends Component {
 
 const Main = () => (
   <Switch>
-    <Route exact path='/' component={ Home } />
+    <Route exact path='/' component={ Guide } />
     <Route path='/guide' component={ Guide } />
     <Route path='/about' component={ About } />
     <Route path='/approach' component={ Approach } />

@@ -10,8 +10,10 @@ class Guide extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTable: <RestaurantsTable/>,
-      selectedTabName: "restaurants",
+      //selectedTable: <RestaurantsTable/>,
+      //selectedTabName: "restaurants",
+      selectedTable: <FarmsTableContainer/>,
+      selectedTabName: "farms",
     };
   }
 
@@ -87,15 +89,15 @@ class Guide extends Component {
       (<h5 key={2} className="legend-color-2">COVER CROPPING</h5>),
       (<h5 key={3} className="legend-color-3">CROP ROTATION/<br/>POLYCULTURE</h5>),
       (<h5 key={4} className="legend-color-4">COMPOSTING/<br/>GRAZING PROGRAM</h5>),
-      (<h5 key={5} className="legend-color-5">INTEGRATION OF<br/>PERENNIAL CROPS,<br/>TREES, HEADGEGROWS</h5>),
+      (<h5 key={5} className="legend-color-5">INTEGRATION OF<br/>PERENNIAL CROPS,<br/>TREES, HEDGEGROWS</h5>),
     ];
 
     const ranchLegend = [
       (<h5 key={1} className="legend-color-1"> NO-TILL </h5>),
       (<h5 key={2} className="legend-color-2">ADAPTIVE MULTI <br/> PADDOCK GRAZING</h5>),
       (<h5 key={3} className="legend-color-3">COMPOST APPLICATION</h5>),
-      (<h5 key={4} className="legend-color-4">ENCOURAGING NATIVE,<br/>PERENNIAL FORAGE</h5>),
-      (<h5 key={5} className="legend-color-5">SILVOPASTURE<br/>HEADGEGROWS</h5>),
+      (<h5 key={4} className="legend-color-4">ENCOURAGING NATIVE/<br/>PERENNIAL FORAGE</h5>),
+      (<h5 key={5} className="legend-color-5">SILVOPASTURE/<br/>HEDGEGROWS</h5>),
     ];
 
     const legendMap = {
@@ -136,7 +138,7 @@ class Guide extends Component {
   }
 
   tableTabs() {
-    const tabNames = ["restaurants", "farms", "ranches"];
+    const tabNames = ["farms", "ranches", "restaurants"];
     return tabNames.map((tabName, index) => {
       return (
         <div key={index}
