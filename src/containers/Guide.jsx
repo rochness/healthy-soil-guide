@@ -80,7 +80,7 @@ class Guide extends Component {
       (<h5 key={1} className="legend-color-1"> SOURCES PRIMARILY<br/>THROUGH FARMS<br/>WITH HEALTHY SOIL</h5>),
       (<h5 key={2} className="legend-color-2">SOURCES PRIMARILY<br/>PASTURE RAISED OR<br/>100% GRASS FED MEAT</h5>),
       (<h5 key={3} className="legend-color-3">COMPOSTS</h5>),
-      //(<h5 key={4} className="legend-color-4">COMPOSTS (YES IT'S<br/>THAT IMPORTANT</h5>),
+      (<h5 key={4} className="legend-color-4">COMPOSTS (YES IT'S<br/>THAT IMPORTANT</h5>),
       (<h5 key={5} className="legend-color-5">GROWS FOOD OR<br/>WORKS DIRECTLY<br/>WITH A PRODUCER</h5>),
     ];
 
