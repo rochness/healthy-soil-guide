@@ -41,8 +41,8 @@ class App extends Component {
           onClick={ this.handleCloseNavClick.bind(this) }>
             &times;
         </a>
-        {/*<Link onClick={ this.handleCloseNavClick.bind(this) } to="/">HOME</Link>*/}
-        {/*<Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">GUIDE</Link>*/}
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/">HOME</Link>
+        <Link onClick={ this.handleCloseNavClick.bind(this) } to="/guide">GUIDE</Link>
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/approach">APPROACH</Link>
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/methodology">METHODOLOGY</Link>
         <Link onClick={ this.handleCloseNavClick.bind(this) } to="/participate">PARTICIPATE</Link>

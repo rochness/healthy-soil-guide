@@ -10,10 +10,8 @@ class Guide extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //selectedTable: <RestaurantsTable/>,
-      //selectedTabName: "restaurants",
-      selectedTable: <FarmsTableContainer dataType="farms"/>,
-      selectedTabName: "farms",
+      selectedTable: <RestaurantsTable/>,
+      selectedTabName: "restaurants",
     };
   }
 
@@ -77,11 +75,11 @@ class Guide extends Component {
 
   guideInfoLegend () {
     const restaurantLegend = [
-      (<h5 key={1} className="legend-color-1"> SOURCES PRIMARILY<br/>THROUGH FARMS<br/>WITH HEALTHY SOIL</h5>),
-      (<h5 key={2} className="legend-color-2">SOURCES PRIMARILY<br/>PASTURE RAISED OR<br/>100% GRASS FED MEAT</h5>),
-      (<h5 key={3} className="legend-color-3">COMPOSTS</h5>),
-      (<h5 key={4} className="legend-color-4">COMPOSTS (YES IT'S<br/>THAT IMPORTANT</h5>),
-      (<h5 key={5} className="legend-color-5">GROWS FOOD OR<br/>WORKS DIRECTLY<br/>WITH A PRODUCER</h5>),
+      (<h5 key={1} className="restaurant-legend legend-color-1"> SOURCES PRIMARILY<br/>THROUGH FARMS<br/>WITH HEALTHY SOIL</h5>),
+      (<h5 key={2} className="restaurant-legend legend-color-2">SOURCES PRIMARILY<br/>PASTURE RAISED OR<br/>100% GRASS FED MEAT</h5>),
+      (<h5 key={3} className="restaurant-legend legend-color-3">COMPOSTS</h5>),
+      (<h5 key={4} className="restaurant-legend legend-color-4">COMPOSTS (YES IT'S<br/>THAT IMPORTANT</h5>),
+      (<h5 key={5} className="restaurant-legend legend-color-5">GROWS FOOD OR<br/>WORKS DIRECTLY<br/>WITH A PRODUCER</h5>),
     ];
 
     const farmLegend = [
@@ -107,8 +105,8 @@ class Guide extends Component {
     };
 
     return (
-      <div>
-        <div className="legend-content">
+      <div className={`legend-container ${this.state.selectedTabName}-legend-container`}>
+        <div className={`legend-content ${this.state.selectedTabName}-legend-content`}>
           { legendMap[this.state.selectedTabName] }
         </div>
         <img className="legend-content"src="/assets/artichoke.png" alt=""/>
@@ -138,7 +136,7 @@ class Guide extends Component {
   }
 
   tableTabs() {
-    const tabNames = ["farms", "ranches", "restaurants"];
+    const tabNames = ["restaurants", "farms", "ranches"];
     return tabNames.map((tabName, index) => {
       return (
         <div key={index}
@@ -158,7 +156,7 @@ class Guide extends Component {
           { this.tableTabs() }
         </div>
         { this.state.selectedTabName === "restaurants" ? null :
-          <div className="example-text-container twelve columns">
+          <div className="twelve columns example-text-container">
             EXAMPLE DATA (we are still in the process of compiling data)
           </div>
         }

@@ -434,11 +434,19 @@ there.
   img.legend-content {
     width: 210px;
   }
+
+  .restaurants-legend-container img {
+    width: 230px;
+  }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
   img.legend-content {
     width: 210px;
+  }
+
+  .restaurants-legend-container img {
+    width: 230px;
   }
 }
