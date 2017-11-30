@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Reactable from "reactable";
 import restaurantData from "../data/restaurants.js";
+import fire from "../data/fire.js";
 
 const LogoItem = (props) => {
   return (
     <div className="logo-container">
-      <a href={ props.website_url }>
+      <a target="_blank" href={ props.website_url }>
         <img className="restaurant-logo"
           src={ props.logo_url }
         />
@@ -18,21 +19,21 @@ class RestaurantsTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      restaurants: restaurantData,
+      restaurants: [],
     };
   }
 
-  /*componentWillMount() {
+  componentWillMount() {
     let restaurants = [];
     let dataQuery = fire.database().ref("restaurants").orderByKey();
      dataQuery.once('value')
       .then(snapshot => {
         snapshot.forEach(childSnapshot => {
-          data.push(childSnapshot.val());
+          restaurants.push(childSnapshot.val());
         });
         this.setState({restaurants: restaurants});
       });
-  }*/
+  }
 
   renderLogoRow() {
     let numberOfRows = Math.ceil(this.state.restaurants.length / 3);
@@ -52,11 +53,14 @@ class RestaurantsTable extends Component {
   }
 
   render() {
-    return (
-      <div className="tableContainer restaurant-container">
-        { this.renderLogoRow() }
-      </div>
-    );
+    if (this.state.restaurants.length > 0) {
+      return (
+        <div className="tableContainer restaurant-container">
+          { this.renderLogoRow() }
+        </div>
+      );
+    }
+    return null;
   }
 }
 
