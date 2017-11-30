@@ -414,6 +414,12 @@ there.
   img.legend-content {
     width: 80px;
   }
+  .restaurant-logo {
+    width: 75px;
+  }
+  .logo-container {
+    margin: 10px;
+  }
 }
 
 /* Larger than tablet */

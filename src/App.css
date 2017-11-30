@@ -378,3 +378,54 @@ textarea {
   text-decoration: none;
   font-size: 20px;
 }
+
+.restaurant-logo {
+  width: 200px;
+}
+
+.logo-container {
+  margin: 20px 70px 20px 70px;
+}
+
+.restaurant-logo-row {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-container {
+  flex-direction: column;
+}
+
+@media (max-width: 1050px) {
+  .logo-container {
+    margin: 20px 30px 20px 30px;
+  }
+}
+@media (max-width: 950px) {
+  .action-button {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 780px) {
+  .restaurant-logo {
+    width: 100px;
+  }
+  .logo-container {
+    margin: 10px 50px 10px 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .restaurant-logo {
+    width: 75px;
+  }
+  .logo-container {
+    margin: 10px;
+  }
+}
+
+
