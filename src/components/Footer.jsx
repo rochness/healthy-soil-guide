@@ -11,7 +11,7 @@ class Footer extends Component {
   }
 
   render() {
-    const actionButtons = ["PARTICIPATE", "FEEDBACK", "DONATE"].map((action, i) =>
+    const actionButtons = ["LEARN MORE", "PARTICIPATE", "DONATE"].map((action, i) =>
       {
         let actionContent;
         if( action === "DONATE" ) {
@@ -24,7 +24,13 @@ class Footer extends Component {
         } else if( action === "PARTICIPATE") {
           actionContent = (<Link to="/participate">{ action }</Link>);
         } else {
-          actionContent = action;
+          actionContent = (
+            <a
+              className="donate-link"
+              href="https://soilsolution.org/"
+              target="_blank">
+              { action }
+            </a>);
         }
 
         return (
