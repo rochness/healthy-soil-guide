@@ -1,13 +1,29 @@
 import React, { Component } from 'react';
 import { browserHistory, Link } from 'react-router-dom';
+import fire from "../data/fire.js";
 
 class Footer extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      createdByOrgs: [],
+    };
   }
 
   handleParticipateClick = () => {
     browserHistory.push('/participate');
+  }
+
+  componentWillMount() {
+    let partners = [];
+    let dataQuery = fire.database().ref("partners").orderByKey();
+     dataQuery.once('value')
+      .then(snapshot => {
+        snapshot.forEach(childSnapshot => {
+          partners.push(childSnapshot.val());
+        });
+        this.setState({createdByOrgs: partners});
+      });
   }
 
   render() {
@@ -40,7 +56,7 @@ class Footer extends Component {
         );
       });
 
-      const createdByOrgs = [
+      /* const createdByOrgs = [
         "The Perrennial Farming Initiative",
         "SNAPP: Managing Soil Carbon Working Group",
         "RSF Social Finance",
@@ -51,8 +67,18 @@ class Footer extends Component {
         "The Regenerative Agriculture Foundation",
         "F.E.E.D Sonoma",
         "The American Farmland Trust",
-      ].map((org) => {
-        return <p>{ org }</p>;
+      ].map((org) => { */
+      const createdByOrgs = this.state.createdByOrgs.map((org) => {
+        if (org.website_url === "") {
+          return <p>{ org.name }</p>;
+        }
+        return (
+          <p>
+            <a href={ org.website_url } target="_blank" className="partner-link">
+            { org.name }
+            </a>
+          </p>
+        );
       });
 
       const researchPartners = [

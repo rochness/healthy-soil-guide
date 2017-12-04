@@ -408,6 +408,11 @@ textarea {
   flex-direction: column;
 }
 
+.partner-link {
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 1050px) {
   .logo-container {
     margin: 20px 30px 20px 30px;
@@ -436,5 +441,3 @@ textarea {
     margin: 10px;
   }
 }
-
-

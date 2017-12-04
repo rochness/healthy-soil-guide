@@ -9,7 +9,7 @@ class FarmsTableContainer extends Component {
       data: [],
       headers: [],
       dataType: this.props.dataType,
-    }
+    };
   }
 
   componentWillMount() {
