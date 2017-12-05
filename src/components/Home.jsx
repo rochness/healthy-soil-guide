@@ -10,9 +10,24 @@ class Home extends Component {
     };
 
     return (
+      <div className="video-page">
+        <div className="video-container">
+          <iframe src="https://player.vimeo.com/video/245847326?autoplay=1&loop=1" width="640" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="video-buttons">
+          <div className="video-buttons-container">
+            <button>
+              <a href="/#/guide">SKIP THE VIDEO ></a>
+            </button>
+          </div>
+        </div>
+      </div>
+  );
+    /*
+    return (
       <div className="video-container">
         <video autoPlay loop style={ videoStyles }>
-            <source type="video/webm" src="https://www.plenty.ag/wp-content/uploads/2017/07/Team-Video_3.webm"/>
+            <source type="video/mp4" src="/assets/Website Teaser_v1.mp4"/>
         </video>
         <div className="video-buttons">
           <div className="video-buttons-container">
@@ -25,7 +40,7 @@ class Home extends Component {
           </div>
         </div>
       </div>
-    );
+    ); */
   }
 }
 

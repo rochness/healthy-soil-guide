@@ -363,22 +363,32 @@ textarea {
 }
 
 .video-container {
-  position: relative;
+  /*position: relative;
   z-index: 0;
+  */
+  padding-top: 5%;
+}
+
+.video-page {
+  width: 100%;
+  /*height: 100vh; */
+  /*background: black; */
 }
 
 .video-buttons {
-  position: absolute;
+/*  position: absolute;
   z-index: 3;
   top: 80%;
   left: 0;
   width: 100%;
+  */
+  margin-top: 30px;
 }
 
 .video-buttons button {
   background: rgba(0,0,0,0.44);
-  height: 50px;
-  margin-left: 4%;
+  height: 35px;
+  /*margin-left: 4%; */
   line-height: inherit;
 }
 

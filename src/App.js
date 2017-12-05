@@ -72,10 +72,10 @@ class App extends Component {
         { this.renderMenuIcon() }
         { this.renderSideNav() }
         <div className={ this.state.menuOpen ? "shifted-container" : "not-shifted" }>
-          <Header/>
+          <Header/> 
           <Main/>
         </div>
-        <Footer/>
+      <Footer/>
       </div>
     );
   }
@@ -83,7 +83,7 @@ class App extends Component {
 
 const Main = () => (
   <Switch>
-    <Route exact path='/' component={ Guide } />
+    <Route exact path='/' component={ Home } />
     <Route path='/guide' component={ Guide } />
     <Route path='/about' component={ About } />
     <Route path='/approach' component={ Approach } />
