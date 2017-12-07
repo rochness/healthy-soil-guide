@@ -49,7 +49,7 @@ class Guide extends Component {
     const restaurantDescription = (
       <p>This Healthy Soil Guide is a concerted effort by
       chefs to improve the food system by supporting
-      healthy soil. Organic matter in soil healthy soil
+      healthy soil. Organic matter in healthy soil
       enhances flavor, nutrition, water-holding capacity,
       and—critically—represents the soil’s role in reversing
       global warming.
